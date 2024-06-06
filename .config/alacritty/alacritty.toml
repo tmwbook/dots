@@ -1,0 +1,26 @@
+live_config_reload = true
+
+import = [
+   "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[colors.primary]
+foreground = "#dadff0"
+
+[colors.selection]
+background = "#fab387" # Peach accent
+
+[font.normal]
+family = "FiraCode Nerd Font Mono"
+style = "Regular"
+
+[font.bold]
+family = "FiraCode Nerd Font Mono"
+style = "Bold"
+
+[font.italic]
+family = "FiraCode Nerd Font Mono"
+
+[font.bold_italic]
+family = "FiraCode Nerd Font Mono"
+
