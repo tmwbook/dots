@@ -71,6 +71,7 @@ button {
 #language,
 #idle_inhibitor,
 #custom-power,
+#custom-spotify,
 #mpd {
     padding: 0 10px;
     color: @peach;
@@ -175,4 +176,8 @@ label:focus {
 
 #keyboard-state > label.locked {
     background: rgba(0, 0, 0, 0.2);
+}
+
+#custom-spotify {
+    color: @green;
 }
