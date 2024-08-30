@@ -14,4 +14,6 @@ end, { expr = true, desc = "[K]hange [M]ode: VSCode Change Syntax" })
 
 vim.opt.spelllang = "en_us"
 
+vim.keymap.set("i", "jk", "<esc>")
+
 return {}
