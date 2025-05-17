@@ -19,7 +19,8 @@
     "modules-right": [
         "mpd",
         "idle_inhibitor",
-	"custom/spotify",
+	//"custom/music",
+        "mpris",
         "pulseaudio",
         "network",
         "cpu",
@@ -142,7 +143,8 @@
         },
         "on-click": "pavucontrol"
     },
-    "custom/spotify": {
+    // External script module that uses python to interact with playerctl/mpris
+    "custom/music": {
         "format": "{icon}",
 	"tooltip": true,
 	"tooltip-format": "{}",
@@ -150,16 +152,34 @@
         "max-length": 40,
         "format-icons": {
             "spotify": "",
+            "YoutubeMusic": "",
             "default": "🎜"
         },
         "escape": true,
         //"exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
 	//"interval": 30,
-	"on-click": "playerctl -p spotify previous",
-	"on-click-middle": "playerctl -p spotify play-pause",
-	"on-click-right": "playerctl -p spotify next",
-        "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify ", // Filter player based on name
-	"exec-if": "pgrep spotify"
+	"on-click": "playerctl -p YoutubeMusic previous",
+	"on-click-middle": "playerctl -p YoutubeMusic play-pause",
+	"on-click-right": "playerctl -p YoutubeMusic next",
+        "exec": "$HOME/.config/waybar/mediaplayer.py --player YoutubeMusic ", // Filter player based on name
+	"exec-if": "pgrep youtube-music"
+    },
+    "mpris": {
+        "format": "{player_icon}",
+        "tooltip-format": "{status_icon} {dynamic}",
+        "player-icons": {
+            "spotify": "",
+            "YoutubeMusic": "",
+            "firefox": "󰈹",
+            "default": "🎜"
+        },
+        "status-icons": {
+            "playing": "",
+            "paused": ""
+        },
+	"on-click": "playerctl -p YoutubeMusic,firefox,%any play-pause",
+	"on-click-middle": "playerctl -p YoutubeMusic,firefox,%any play-pause",
+	"on-click-right": "playerctl -p YoutubeMusic,firefox,%any next",
     },
     "custom/power": {
 	"format": "⏻",

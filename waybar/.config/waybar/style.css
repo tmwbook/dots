@@ -71,7 +71,8 @@ button {
 #language,
 #idle_inhibitor,
 #custom-power,
-#custom-spotify,
+#custom-music,
+#mpris,
 #mpd {
     padding: 0 10px;
     color: @peach;
@@ -178,6 +179,14 @@ label:focus {
     background: rgba(0, 0, 0, 0.2);
 }
 
-#custom-spotify {
-    color: @green;
+#custom-music {
+    color: @red;
 }
+
+#mpris.YoutubeMusic {
+    color: @red;
+}
+#mpris.firefox {
+    color: @peach;
+}
+
