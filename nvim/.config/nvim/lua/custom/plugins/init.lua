@@ -16,4 +16,6 @@ vim.opt.spelllang = "en_us"
 
 vim.keymap.set("i", "jk", "<esc>")
 
+vim.opt.conceallevel = 2
+
 return {}
