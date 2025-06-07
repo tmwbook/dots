@@ -1,4 +1,5 @@
 *nohup*
 tmux/.config/tmux/plugins
 nvim/.config/nvim/lua/local/*
+hypr/.config/hypr/local*
 
