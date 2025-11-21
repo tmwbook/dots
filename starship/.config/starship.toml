@@ -1,3 +1,7 @@
+format = """
+$shell\
+$all
+"""
 [aws]
 symbol = "  "
 
@@ -162,3 +166,8 @@ symbol = " "
 
 [zig]
 symbol = " "
+
+[shell]
+disabled = false
+fish_indicator = "🐟"
+
