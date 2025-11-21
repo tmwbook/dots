@@ -110,6 +110,15 @@ alias cd="z"
 alias ls="eza --icons --no-permissions --no-user"
 alias tree="eza --icons --tree --level=2"
 
+alias pbcopy="wl-copy"
+alias pbpaste="wl-paste"
+
 # Created by `pipx` on 2025-01-31 01:22:04
 export PATH="$PATH:/home/tom/.local/bin"
+
+source /usr/share/nvm/init-nvm.sh
+
+export MANPAGER='nvim +Man!'
+
+export PATH="$PATH:$HOME/go/bin"
 
