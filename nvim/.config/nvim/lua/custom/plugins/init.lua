@@ -3,6 +3,16 @@
 --
 -- See the kickstart.nvim README for more information
 
+vim.lsp.config("lua_ls", {
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { "vim" },
+			},
+		},
+	},
+})
+
 vim.o.expandtab = true
 vim.o.tabstop = 2
 vim.o.shiftwidth = 4
@@ -11,6 +21,7 @@ vim.keymap.set("n", "<leader>sk", require("telescope.builtin").keymaps, { desc =
 vim.keymap.set("n", "<leader>km", function()
 	return ":set filetype="
 end, { expr = true, desc = "[K]hange [M]ode: VSCode Change Syntax" })
+vim.keymap.set("n", "<leader>Q", ":cclose<cr>", { desc = "Close Quicklist" })
 
 vim.opt.spelllang = "en_us"
 
