@@ -73,6 +73,7 @@ button {
 #custom-power,
 #custom-music,
 #mpris,
+#bluetooth,
 #mpd {
     padding: 0 10px;
     color: @peach;
@@ -188,5 +189,14 @@ label:focus {
 }
 #mpris.firefox {
     color: @peach;
+}
+
+#bluetooth.on {
+    color: @green;
+    font-size: 1.25em;
+}
+
+#bluetooth.connected {
+    color: @blue;
 }
 
